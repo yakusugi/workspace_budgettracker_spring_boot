@@ -1,5 +1,7 @@
 package com.example.demo.repository;
 import org.apache.ibatis.annotations.Mapper;
+
+import com.example.demo.dto.BudgetTrackerInsertRequest;
 import com.example.demo.dto.BudgetTrackerSearchRequest;
 import com.example.demo.entity.BudgetTracker;
 /**
@@ -13,4 +15,6 @@ public interface BudgetTrackerMapper {
      * @return ユーザー情報
      */
 	BudgetTracker search(BudgetTrackerSearchRequest budgetTracker);
+	
+	BudgetTracker insert(BudgetTrackerInsertRequest budgetTracker);
 }

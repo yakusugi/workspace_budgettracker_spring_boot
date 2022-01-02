@@ -6,4 +6,7 @@
     <select id="search" resultType="com.example.demo.entity.BudgetTracker">
         SELECT * FROM budget_table WHERE id = #{id}
     </select>
+    <select id="insert" resultType="com.example.demo.entity.BudgetTracker">
+    	insert into budget_table (id, Date, StoreName, ProductName, ProductType, Price) values (#{id}, #{date}, #{storeName}, #{productName}, #{productType}, #{price});
+    </select>
 </mapper>
