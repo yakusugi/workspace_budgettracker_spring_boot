@@ -36,7 +36,7 @@ public class BudgetTrackerInsertController {
    * @param model Model
    * @return ユーザー情報一覧画面
    */
-  @RequestMapping(value = "/budgettracker/id_search", method = RequestMethod.POST)
+  @RequestMapping(value = "/budgettracker/insert_result", method = RequestMethod.POST)
   public String insert(@ModelAttribute BudgetTrackerInsertRequest budgetTrackerInsertRequest, Model model) {
 	  BudgetTracker budgetTracker = budgetTrackerService.insert(budgetTrackerInsertRequest);
     model.addAttribute("budgetrackerinfo", budgetTracker);
