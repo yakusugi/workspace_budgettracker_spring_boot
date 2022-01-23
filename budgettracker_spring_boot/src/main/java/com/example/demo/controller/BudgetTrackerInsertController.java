@@ -28,7 +28,7 @@ public class BudgetTrackerInsertController {
    */
   @GetMapping(value = "/budgettracker/insert")
   public String displaySearch(Model model) {
-    return "budgettracker/insert";
+    return "budgettracker/insert.html";
   }
   /**
    * ユーザー情報検索
