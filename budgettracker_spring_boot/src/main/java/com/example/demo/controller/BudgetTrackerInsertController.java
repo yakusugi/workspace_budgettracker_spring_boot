@@ -27,8 +27,8 @@ public class BudgetTrackerInsertController {
    * @return ユーザー情報一覧画面
    */
   @GetMapping(value = "/budgettracker/insert")
-  public String displaySearch(Model model) {
-    return "budgettracker/insert.html";
+  public String displayInsert(Model model) {
+    return "budgettracker/insert";
   }
   /**
    * ユーザー情報検索
@@ -36,7 +36,7 @@ public class BudgetTrackerInsertController {
    * @param model Model
    * @return ユーザー情報一覧画面
    */
-  @RequestMapping(value = "/budgettracker/insert_result", method = RequestMethod.POST)
+  @RequestMapping(value = "/budgettracker/insert_result", method = RequestMethod.GET)
   public String insert(@ModelAttribute BudgetTrackerInsertRequest budgetTrackerInsertRequest, Model model) {
 	  BudgetTracker budgetTracker = budgetTrackerService.insert(budgetTrackerInsertRequest);
     model.addAttribute("budgetrackerinfo", budgetTracker);

@@ -9,7 +9,7 @@
 <body>
     <h1>BudgetTracker Insert 画面</h1>
     <form th:action="@{/budgettracker/insert}" th:object="${budgetTrackerInsertRequest}"
-        th:method="post">
+        th:method="get">
         <div>
             ID：<input type="text" name="id" size="40" />
             </br></br>
@@ -29,8 +29,8 @@
         </div>
         <br />
     </form>
-    <div th:if="${userinfo}">
-        <table th:object="${userinfo}">
+    <div th:if="${budgetrackerinfo}">
+        <table th:object="${budgetrackerinfo}">
             <tr>
                 <th class="cell_title">商品名</th>
                 <td th:text="*{productName}"></td>
